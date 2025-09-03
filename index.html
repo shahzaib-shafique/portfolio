@@ -1,14 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
-<body>
-    
 
+<body>
+
+    <hedaer>
+        <nav>
+            <div class="left">
+                <p>Shahzaib's Portfolio</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li class="resume-dropdown">
+                        <a href="#">Resume ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resume.pdf" target="_blank">View Resume</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </hedaer>
+
+    <main>
+        <section id="home" class="section1">
+            <div class="leftsec">
+                Hi , Myself <span class="purple">Shahzaib Shafique</span>
+                <div>and I am a Passionate</div>
+                <span id="element"></span>
+
+            </div>
+            <div class="rightsec">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="about" class="about">
+            <h1>About me</h1>
+            <p>
+                I am a Computer Science student passionate about coding and web development.
+                I have built projects like <strong> Calculator, Tic Tac Toe, and Currency Converter</strong> using
+                <strong>HTML, CSS, JavaScript, and Bootstrap.</strong>
+                My goal is to strengthen my concepts, build real-world applications, and grow as a developer.
+                I love turning ideas into interactive websites. My focus is on building
+                clean, responsive, and user-friendly interfaces.
+            </p>
+
+        </section>
+        <hr>
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Calculator</h3>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Currency Converter</h3>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Tic Tac Toe</h3>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="contact" class="contact">
+            <h1>Contact Me</h1>
+            <p>Email: shahzaibshafique734@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/shahzaib shafique/
+" target="_blank">My LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/shahzaib-shafique" target="_blank">My GitHub</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Shahzaib Shafique | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
