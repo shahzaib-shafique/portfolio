@@ -1,106 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Shahzaib Shafique | Portfolio</title>
 </head>
-
 <body>
 
-    <hedaer>
-        <nav>
-            <div class="left">
-                <p>Shahzaib's Portfolio</p>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li class="resume-dropdown">
-                        <a href="#">Resume ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="resume.pdf" target="_blank">View Resume</a></li>
+  <header>
+  <nav>
+    <div class="left">
+      <p>Shahzaib's Portfolio</p>
+    </div>
+    <div class="right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-                        </ul>
-                    </li>
+      
+      <a href="resume.pdf" class="btn mobile-resume" download>Download Resume</a>
+    </div>
+  </nav>
+</header>
 
 
-                    <li><a href="#contact">Contact me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </hedaer>
+  <main>
+  
+    <section id="home" class="section1">
+      <div class="leftsec">
+        Hi, Myself <span class="purple">Shahzaib Shafique</span>
+        <div>and I am a Passionate</div>
+        <span id="element"></span>
+      </div>
+      <div class="rightsec">
+        <img src="bg.png" alt="Shahzaib's profile image">
+      </div>
+    </section>
 
-    <main>
-        <section id="home" class="section1">
-            <div class="leftsec">
-                Hi , Myself <span class="purple">Shahzaib Shafique</span>
-                <div>and I am a Passionate</div>
-                <span id="element"></span>
+    <hr>
 
-            </div>
-            <div class="rightsec">
-                <img src="bg.png" alt="">
-            </div>
-        </section>
-        <hr>
-        <section id="about" class="about">
-            <h1>About me</h1>
-            <p>
-                I am a Computer Science student passionate about coding and web development.
-                I have built projects like <strong> Calculator, Tic Tac Toe, and Currency Converter</strong> using
-                <strong>HTML, CSS, JavaScript, and Bootstrap.</strong>
-                My goal is to strengthen my concepts, build real-world applications, and grow as a developer.
-                I love turning ideas into interactive websites. My focus is on building
-                clean, responsive, and user-friendly interfaces.
-            </p>
+    <section id="about" class="about">
+      <h1>About Me</h1>
+      <p>
+        I am a Computer Science student passionate about coding and web development.
+        I have built projects like <strong>Calculator, Tic Tac Toe, and Currency Converter</strong> using
+        <strong>HTML, CSS, JavaScript, and Bootstrap.</strong>
+        My goal is to strengthen my concepts, build real-world applications, and grow as a developer.
+        I love turning ideas into interactive websites. My focus is on building
+        clean, responsive, and user-friendly interfaces.
+      </p>
+    </section>
 
-        </section>
-        <hr>
-        <section id="projects" class="projects">
-            <h1>Projects</h1>
-            <div class="project-list">
-                <div class="project-card">
-                    <h3>Calculator</h3>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Currency Converter</h3>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Tic Tac Toe</h3>
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section id="contact" class="contact">
-            <h1>Contact Me</h1>
-            <p>Email: shahzaibshafique734@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/shahzaib shafique/
-" target="_blank">My LinkedIn</a></p>
-            <p>GitHub: <a href="https://github.com/shahzaib-shafique" target="_blank">My GitHub</a></p>
-        </section>
-    </main>
+    <hr>
 
-    <footer>
-        <p>© 2025 Shahzaib Shafique | All Rights Reserved</p>
-    </footer>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="app.js"></script>
+    <section id="projects" class="projects">
+      <h1>Projects</h1>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>Calculator</h3>
+          <p>
+            A responsive calculator built with HTML, CSS, and JavaScript.
+            It supports basic operations, powers, percentages, sum, and trigonometric functions
+            with a clean, user-friendly interface and real-time error handling.
+          </p>
+          <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Currency Converter</h3>
+          <p>
+            A currency converter built with HTML, CSS, and JavaScript.
+            It uses a free API for real-time exchange rates, supports multiple currencies with country
+            flags, and a mobile-friendly design with instant results.
+          </p>
+          <a href="https://global-currrate.netlify.app/" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Rock Paper Scissor</h3>
+          <p>
+            A Rock Paper Scissors game built with HTML, CSS, and JavaScript.
+            Features real-time score tracking, colorful win/loss messages, and a reset option,
+            with a simple, responsive, and user-friendly design.
+          </p>
+          <a href="https://rock-paper-scissors-shahzaib.netlify.app/" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    
+    <section id="contact" class="contact">
+      <h1>Contact Me</h1>
+      <p>If you'd like to collaborate, discuss a project, or just say hi, feel free to reach out!</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/shahzaib-shafique" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/shahzaib-shafique" target="_blank" class="github"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/923001234567" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Shahzaib Shafique | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="app.js"></script>
 </body>
-
 </html>
