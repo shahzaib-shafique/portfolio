@@ -5,21 +5,31 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(0,0,33);
-    color: white;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(0, 0, 33);
+    color: white;
+    user-select: none;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  
+}
 
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgb(18,18,62);
+    background: rgb(18, 18, 62);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
     z-index: 1000;
@@ -28,7 +38,7 @@ nav {
 .left {
     font-size: 1.6rem;
     font-weight: bold;
-    color: rgb(170,107,228);
+    color: rgb(170, 107, 228);
 }
 
 .right {
@@ -59,7 +69,7 @@ nav ul li a::after {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: rgb(170,107,228);
+    background: rgb(170, 107, 228);
     transition: width 0.3s ease;
 }
 
@@ -70,14 +80,14 @@ nav ul li a.active::after {
 
 nav ul li a.active,
 nav ul li a:hover {
-    color: rgb(170,107,228);
+    color: rgb(170, 107, 228);
 }
 
 .right .btn {
     position: relative;
     overflow: hidden;
     padding: 8px 16px;
-    background: rgb(170,107,228);
+    background: rgb(170, 107, 228);
     border-radius: 6px;
     text-decoration: none;
     color: white;
@@ -93,7 +103,7 @@ nav ul li a:hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
     transition: left 0.4s ease;
     z-index: 0;
 }
@@ -104,27 +114,47 @@ nav ul li a:hover {
 
 .right .btn:hover {
     background: white;
-    color: rgb(170,107,228);
+    color: rgb(170, 107, 228);
 }
 
 
 .hamburger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
+    cursor: pointer;
 }
 
-.hamburger div {
+.hamburger span {
     width: 25px;
     height: 3px;
     background: white;
+    border-radius: 2px;
     transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 
 main section {
+    min-height: 100vh;
+ 
     padding: 120px 60px 60px;
+    scroll-snap-align: start;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -136,43 +166,44 @@ main hr {
     margin: 20px auto;
 }
 
-
 .section1 {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
 .leftsec {
-    font-size: 2.5rem;
     flex: 1;
     min-width: 280px;
+    font-size: 2.5rem;
+    text-align: left;
 }
 
 .purple,
-#element {
+#element,
+#typed {
     color: rgb(170, 107, 228);
     font-weight: bold;
 }
 
-
-#typed {
-    color: rgb(170, 107, 228);
+.rightsec {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
 }
 
 .rightsec img {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
+    height: auto;
+    display: block;
 }
 
-.section1 > div {
-    flex: 1;
-    min-width: 280px;
-    padding: 10px;
-}
 
-/* ABOUT */
 .about {
     max-width: 80vw;
     margin: auto;
@@ -193,7 +224,6 @@ main hr {
     text-align: justify;
     padding: 0 15px;
 }
-
 
 .projects {
     max-width: 80vw;
@@ -237,9 +267,6 @@ main hr {
 }
 
 .project-card p {
-    opacity: 1;
-    max-height: none;
-    margin: 12px 0 0 0;
     font-size: 0.95rem;
     color: #ccc;
     line-height: 1.6;
@@ -268,7 +295,7 @@ main hr {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
     transition: left 0.4s;
 }
 
@@ -278,14 +305,24 @@ main hr {
 
 .project-card a:hover {
     background: white;
-    color: rgb(170,107,228);
+    color: rgb(170, 107, 228);
+}
+
+
+.contact-wrapper {
+    min-height: 100vh;
+   
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
 .contact {
     max-width: 80vw;
     margin: auto;
-    padding: 50px 20px;
+    padding: 50px 20px 20px;
     text-align: center;
 }
 
@@ -312,25 +349,33 @@ main hr {
     text-decoration: underline;
 }
 
-/* Contact form */
 .contact-form {
-    max-width: 500px;
+    width: 100%;
+    max-width: 600px;
     margin: 30px auto 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
+    width: 100%;
+    padding: clamp(12px, 2vw, 18px);
+  
     border: none;
     border-radius: 8px;
     outline: none;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+ 
     background: rgba(18, 18, 62, 0.9);
     color: #fff;
     transition: border 0.3s ease, background 0.3s ease;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .contact-form input:focus,
@@ -342,14 +387,17 @@ main hr {
 .contact-form button {
     position: relative;
     overflow: hidden;
-    padding: 12px;
+    padding: clamp(12px, 2vw, 16px);
+  
     background: rgb(170, 107, 228);
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+ 
     cursor: pointer;
-    width: 50%;
+    width: clamp(50%, 60%, 300px);
+   
     margin: 10px auto 0 auto;
     transition: 0.3s;
 }
@@ -375,7 +423,41 @@ main hr {
     color: rgb(170, 107, 228);
 }
 
-/* FOOTER */
+
+.back {
+    text-align: center;
+}
+
+.back ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.back ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: rgb(170, 107, 228);
+    transition: width 0.3s ease;
+}
+
+.back ul li a:hover::after {
+    width: 100%;
+}
+
+.back ul li a:hover {
+    color: rgb(170, 107, 228);
+}
+
+
+
 footer {
     text-align: center;
     padding: 20px;
@@ -383,7 +465,7 @@ footer {
     margin-top: 30px;
 }
 
-/* Social links */
+
 .social-links {
     margin-top: 3rem;
     display: flex;
@@ -404,17 +486,25 @@ footer {
     text-decoration: none;
 }
 
-.social-links a.linkedin { background: #0077b5; }
-.social-links a.github { background: #333; }
-.social-links a.whatsapp { background: #25d366; }
+.social-links a.linkedin {
+    background: #0077b5;
+}
+
+.social-links a.github {
+    background: #333;
+}
+
+.social-links a.whatsapp {
+    background: #25d366;
+}
 
 .social-links a:hover {
     transform: scale(1.15);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    text-decoration: none; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
     nav {
         padding: 15px 30px;
@@ -424,7 +514,7 @@ footer {
         position: absolute;
         top: 65px;
         right: -100%;
-        background: rgb(18,18,62);
+        background: rgb(18, 18, 62);
         flex-direction: column;
         width: 200px;
         gap: 15px;
@@ -449,4 +539,19 @@ footer {
     main section {
         padding: 140px 20px 60px;
     }
+
+    .section1 {
+        flex-direction: column;
+    }
 }
+
+@media (min-width: 1200px) {
+    .leftsec {
+        font-size: 3rem;
+    }
+
+    .rightsec img {
+        max-width: 500px;
+    }
+}
+/*portfolio*/

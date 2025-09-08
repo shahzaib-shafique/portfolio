@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
   <link rel="stylesheet" href="style.css">
   <title>Shahzaib Shafique | Portfolio</title>
 </head>
+
 <body>
 
   <header>
-  <nav>
-    <div class="left">
-      <p>Shahzaib's Portfolio</p>
-    </div>
-    <div class="right">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav>
+      <div class="left">
+        <p>Shahzaib's Portfolio</p>
+      </div>
+      <div class="right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
 
-      
-      <a href="resume.pdf" class="btn mobile-resume" download>Download Resume</a>
-    </div>
-  </nav>
-</header>
+        </ul>
+
+        <a href="resume.pdf" class="btn desktop-only" download>Download Resume</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
 
 
   <main>
-  
+
+
     <section id="home" class="section1">
       <div class="leftsec">
         Hi, Myself <span class="purple">Shahzaib Shafique</span>
@@ -48,13 +60,16 @@
 
     <hr>
 
+
     <section id="about" class="about">
       <h1>About Me</h1>
       <p>
         I am a Computer Science student passionate about coding and web development.
-        I have built projects like <strong>Calculator, Tic Tac Toe, and Currency Converter</strong> using
+        I have built projects like <strong>Calculator, Tic Tac Toe, and Currency Converter</strong>
+        using
         <strong>HTML, CSS, JavaScript, and Bootstrap.</strong>
-        My goal is to strengthen my concepts, build real-world applications, and grow as a developer.
+        My goal is to strengthen my concepts, build real-world applications, and grow as a
+        developer.
         I love turning ideas into interactive websites. My focus is on building
         clean, responsive, and user-friendly interfaces.
       </p>
@@ -62,7 +77,7 @@
 
     <hr>
 
-
+   
     <section id="projects" class="projects">
       <h1>Projects</h1>
       <div class="project-list">
@@ -80,7 +95,8 @@
           <h3>Currency Converter</h3>
           <p>
             A currency converter built with HTML, CSS, and JavaScript.
-            It uses a free API for real-time exchange rates, supports multiple currencies with country
+            It uses a free API for real-time exchange rates, supports multiple currencies with
+            country
             flags, and a mobile-friendly design with instant results.
           </p>
           <a href="https://global-currrate.netlify.app/" target="_blank">View Project</a>
@@ -93,17 +109,19 @@
             Features real-time score tracking, colorful win/loss messages, and a reset option,
             with a simple, responsive, and user-friendly design.
           </p>
-          <a href="https://rock-paper-scissors-shahzaib.netlify.app/" target="_blank">View Project</a>
+          <a href="https://rock-paper-scissors-shahzaib.netlify.app/" target="_blank">View
+            Project</a>
         </div>
       </div>
     </section>
 
     <hr>
 
-    
+   
     <section id="contact" class="contact">
       <h1>Contact Me</h1>
-      <p>If you'd like to collaborate, discuss a project, or just say hi, feel free to reach out!</p>
+      <p>If you'd like to collaborate, discuss a project, or just say hi, feel free to reach out!
+      </p>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -112,19 +130,29 @@
       </form>
 
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/shahzaib-shafique" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/shahzaib-shafique" target="_blank" class="linkedin"><i
+            class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/shahzaib-shafique" target="_blank" class="github"><i class="fab fa-github"></i></a>
         <a href="https://wa.me/923001234567" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </section>
-
   </main>
+
+
+  <div class="back">
+    <ul class="back-link">
+      <li><a href="#home">Back to Home</a></li>
+    </ul>
+  </div>
+
 
   <footer>
     <p>© 2025 Shahzaib Shafique | All Rights Reserved</p>
   </footer>
 
+
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="app.js"></script>
 </body>
+<!--portfolio-->
 </html>
